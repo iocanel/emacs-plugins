@@ -1,0 +1,70 @@
+#+TITLE: Maintenance Guide
+#+AUTHOR: Ioannis Canellos
+
+* Git Submodule Management
+
+** Initial Setup
+
+1. Clone this repository with submodules:
+   #+BEGIN_SRC bash
+   git clone --recursive https://github.com/iocanel/emacs-plugins.git
+   #+END_SRC
+
+2. Or if already cloned, initialize and update submodules:
+   #+BEGIN_SRC bash
+   git submodule init
+   git submodule update
+   #+END_SRC
+
+** Working with Submodules
+
+*** Updating submodules to latest commits:
+#+BEGIN_SRC bash
+git submodule update --remote
+#+END_SRC
+
+*** Updating a specific submodule:
+#+BEGIN_SRC bash
+git submodule update --remote <submodule-name>
+#+END_SRC
+
+*** Adding a new submodule:
+#+BEGIN_SRC bash
+git submodule add <repository-url> <directory-name>
+#+END_SRC
+
+*** Removing a submodule:
+#+BEGIN_SRC bash
+git submodule deinit <submodule-name>
+git rm <submodule-name>
+git commit -m "Remove <submodule-name> submodule"
+#+END_SRC
+
+*** Working on submodule changes:
+#+BEGIN_SRC bash
+cd <submodule-directory>
+# Make changes, commit, and push to the submodule repository
+git add .
+git commit -m "Your changes"
+git push origin main
+
+# Return to main repository and commit the submodule update
+cd ..
+git add <submodule-directory>
+git commit -m "Update <submodule-name> to latest version"
+#+END_SRC
+
+** Automated Updates
+
+A GitHub Action workflow is available to automatically update all submodules to their latest commits:
+
+1. Navigate to the repository on GitHub
+2. Go to the "Actions" tab
+3. Select "Update Submodules" workflow
+4. Click "Run workflow"
+5. Optionally provide a custom commit message
+
+The workflow will:
+- Update all submodules to their latest commits
+- Only commit changes if updates are available
+- Provide clear feedback on the update status

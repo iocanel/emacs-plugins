@@ -1,0 +1,60 @@
+name: Update Submodules
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_message:
+        description: 'Custom commit message (optional)'
+        required: false
+        default: 'Update submodules to latest commits'
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Configure Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+    - name: Update submodules to latest commits
+      run: |
+        git submodule update --remote
+        
+    - name: Check for changes
+      id: changes
+      run: |
+        if git diff --quiet; then
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+          echo "No submodule updates available"
+        else
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+          echo "Submodule updates detected"
+          git status --porcelain
+        fi
+        
+    - name: Commit and push changes
+      if: steps.changes.outputs.has_changes == 'true'
+      run: |
+        git add .
+        COMMIT_MESSAGE="${{ github.event.inputs.commit_message }}"
+        if [ -z "$COMMIT_MESSAGE" ]; then
+          COMMIT_MESSAGE="Update submodules to latest commits"
+        fi
+        git commit -m "$COMMIT_MESSAGE"
+        git push
+        
+    - name: Summary
+      run: |
+        if [ "${{ steps.changes.outputs.has_changes }}" == "true" ]; then
+          echo "✅ Submodules have been updated and changes committed"
+        else
+          echo "ℹ️ All submodules are already up to date"
+        fi

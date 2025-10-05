@@ -1,0 +1,64 @@
+#+TITLE: Emacs Plugins
+#+AUTHOR: Ioannis Canellos
+
+
+* Purpose
+
+This repository serves as an aggregator for Emacs plugins that I actively maintain and contribute to. It uses git submodules to organize and manage multiple plugin repositories in a single location, making it easier to:
+
+- Track development across multiple plugins
+- Maintain consistent development workflows
+- Share common tools and configurations
+- Provide a centralized entry point for all plugin projects
+
+* Available Projects
+
+** quickmarks.el
+- *Directory:* =quickmarks.el/=
+- *Repository:* https://github.com/iocanel/quickmarks.el
+- *Description:* Emacs plugin for managing named bookmarks and images with org-mode integration
+- *Features:*
+  - Named bookmarks
+  - Named images (logos, memes, etc.)
+  - Org mode integration
+
+** imgflip.el
+- *Directory:* =imgflip.el/=
+- *Repository:* https://github.com/iocanel/imgflip.el
+- *Description:* Imgflip API client for Emacs that enables meme generation directly from Emacs
+- *Features:*
+  - Elisp client for imgflip.com
+  - Create and download memes with custom text
+  - Org-mode snippets for easy meme embedding
+  - Template search by name or ID
+  - Integration with org-mode for displaying images
+
+** dired-lock.el
+- *Directory:* =dired-lock.el/=
+- *Repository:* https://github.com/iocanel/dired-lock.el
+- *Description:* Simple plugin to lock/unlock archives and PDF files directly from dired mode
+- *Features:*
+  - Lock directories as password-protected zip archives
+  - Lock PDF files with password protection
+  - Unlock password-protected zip archives and PDFs
+  - Customizable command patterns for different tools
+  - Automatic dired buffer refresh after operations
+  - Key binding configuration examples
+
+** idee
+- *Directory:* =idee/=
+- *Repository:* https://github.com/iocanel/idee
+- *Description:* Comprehensive IDE-like functionality for Emacs with multi-language support
+- *Features:*
+  - Integration with projectile, treemacs, and yasnippet
+  - Global shortcuts for multiple languages (Java, Clojure, Python, Go, JavaScript)
+  - IDE-like swappable layouts and advanced navigation
+  - File template and header management system
+  - Project factory support (Quarkus, Spring, Maven, NPM)
+  - Enhanced Maven integration with hydra interface
+  - Window management improvements
+  - Archetype system for code generation
+
+* Maintenance
+
+For information on managing git submodules and repository maintenance, see [[./MAINTENANCE.org][MAINTENANCE.org]].

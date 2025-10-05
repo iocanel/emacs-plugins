@@ -1,0 +1,12 @@
+[submodule "quickmarks.el"]
+	path = quickmarks.el
+	url = git@github.com:iocanel/quickmarks.el.git
+[submodule "imgflip.el"]
+	path = imgflip.el
+	url = https://github.com/iocanel/imgflip.el
+[submodule "dired-lock.el"]
+	path = dired-lock.el
+	url = git@github.com:iocanel/dired-lock.el.git
+[submodule "idee"]
+	path = idee
+	url = git@github.com:iocanel/idee.git
