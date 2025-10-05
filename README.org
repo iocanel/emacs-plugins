@@ -13,40 +13,7 @@ This repository serves as an aggregator for Emacs plugins that I actively mainta
 
 * Available Projects
 
-** quickmarks.el
-- *Directory:* =quickmarks.el/=
-- *Repository:* https://github.com/iocanel/quickmarks.el
-- *Description:* Emacs plugin for managing named bookmarks and images with org-mode integration
-- *Features:*
-  - Named bookmarks
-  - Named images (logos, memes, etc.)
-  - Org mode integration
-
-** imgflip.el
-- *Directory:* =imgflip.el/=
-- *Repository:* https://github.com/iocanel/imgflip.el
-- *Description:* Imgflip API client for Emacs that enables meme generation directly from Emacs
-- *Features:*
-  - Elisp client for imgflip.com
-  - Create and download memes with custom text
-  - Org-mode snippets for easy meme embedding
-  - Template search by name or ID
-  - Integration with org-mode for displaying images
-
-** dired-lock.el
-- *Directory:* =dired-lock.el/=
-- *Repository:* https://github.com/iocanel/dired-lock.el
-- *Description:* Simple plugin to lock/unlock archives and PDF files directly from dired mode
-- *Features:*
-  - Lock directories as password-protected zip archives
-  - Lock PDF files with password protection
-  - Unlock password-protected zip archives and PDFs
-  - Customizable command patterns for different tools
-  - Automatic dired buffer refresh after operations
-  - Key binding configuration examples
-
 ** idee
-- *Directory:* =idee/=
 - *Repository:* https://github.com/iocanel/idee
 - *Description:* Comprehensive IDE-like functionality for Emacs with multi-language support
 - *Features:*
@@ -58,6 +25,35 @@ This repository serves as an aggregator for Emacs plugins that I actively mainta
   - Enhanced Maven integration with hydra interface
   - Window management improvements
   - Archetype system for code generation
+
+** dired-lock.el
+- *Repository:* https://github.com/iocanel/dired-lock.el
+- *Description:* Simple plugin to lock/unlock archives and PDF files directly from dired mode
+- *Features:*
+  - Lock directories as password-protected zip archives
+  - Lock PDF files with password protection
+  - Unlock password-protected zip archives and PDFs
+  - Customizable command patterns for different tools
+  - Automatic dired buffer refresh after operations
+  - Key binding configuration examples
+
+** quickmarks.el
+- *Repository:* https://github.com/iocanel/quickmarks.el
+- *Description:* Emacs plugin for managing named bookmarks and images with org-mode integration
+- *Features:*
+  - Named bookmarks
+  - Named images (logos, memes, etc.)
+  - Org mode integration
+
+** imgflip.el
+- *Repository:* https://github.com/iocanel/imgflip.el
+- *Description:* Imgflip API client for Emacs that enables meme generation directly from Emacs
+- *Features:*
+  - Elisp client for imgflip.com
+  - Create and download memes with custom text
+  - Org-mode snippets for easy meme embedding
+  - Template search by name or ID
+  - Integration with org-mode for displaying images
 
 * Maintenance
 
