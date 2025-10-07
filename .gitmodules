@@ -3,7 +3,7 @@
 	url = git@github.com:iocanel/quickmarks.el.git
 [submodule "imgflip.el"]
 	path = imgflip.el
-	url = https://github.com/iocanel/imgflip.el
+	url = git@github.com:iocanel/imgflip.el.git
 [submodule "dired-lock.el"]
 	path = dired-lock.el
 	url = git@github.com:iocanel/dired-lock.el.git
